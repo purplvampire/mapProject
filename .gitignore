@@ -1,0 +1,14 @@
+.env
+.venv
+.vscode
+__pycache__
+data.db
+*.pyc
+.DS_Store
+Sample
+*sample
+*-sample.py
+githubPush.txt
+backup
+*dictionary.py
+*2.py
