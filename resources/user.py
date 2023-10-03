@@ -10,6 +10,7 @@ from schemas import UserSchema # 要改
 
 blp = Blueprint("Users", "users", description="Operations on users")
 
+
 @blp.route("/user/<string:user_id>")
 class User(MethodView):
     # 表列某用戶資料
