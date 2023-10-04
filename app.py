@@ -32,9 +32,9 @@ def create_app(db_url=None):
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
     # 初始化DB物件
     db.init_app(app)
-    # migrate = Migrate(app, db)  # 取代下兩行建立DB
-    with app.app_context():
-        db.create_all()
+    migrate = Migrate(app, db)  # 取代下兩行建立DB
+    # with app.app_context():
+    #     db.create_all()
 
     # 初始化API
     api = Api(app)
