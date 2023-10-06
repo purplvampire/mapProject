@@ -58,6 +58,12 @@ class PlainMapSchema(Schema):
     memo = fields.Str()
     distance = fields.Int()
     path = fields.Str(required=True)
+    is_post = fields.Bool()
+    post_date = fields.Date()
+    post_time = fields.DateTime(required=True)
+    period = fields.Str()
+    start_time = fields.DateTime()
+    end_time = fields.DateTime()
 
 class PlainPathSchema(Schema):
     id = fields.Int(dump_only=True)
