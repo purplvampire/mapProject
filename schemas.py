@@ -51,6 +51,7 @@ class PlainUserSchema(Schema):
     password = fields.Str(required=True)
     email = fields.Str(required=True)
     image = fields.Str()
+    introduce = fields.Str()
 
 class PlainMapSchema(Schema):
     id = fields.Int(dump_only=True)

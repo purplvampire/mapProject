@@ -35,6 +35,7 @@ class User(MethodView):
             user.email = user_data["email"]
             user.password = user_data["password"]
             user.image = user_data["image"]
+            user.introduce = user_data["introduce"]
         else:
             user = UserModel(id=user_id, **user_data)
 

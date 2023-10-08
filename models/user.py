@@ -9,6 +9,7 @@ class UserModel(db.Model):
     email = db.Column(db.String, unique=True, nullable=False)
     password = db.Column(db.String, nullable=False)        # 密碼不限長度
     image = db.Column(db.Text, nullable=True)  
+    introduce = db.Column(db.String, nullable=True)
 
     # 建立關聯，一但刪除將連鎖刪除items資料
     maps = db.relationship("MapModel", back_populates="user", lazy="dynamic", cascade="all, delete")
